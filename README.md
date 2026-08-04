@@ -48,6 +48,7 @@ Actualmente:
 
 - HTML5
 
+- Javascript
 
 
 Próximamente:
@@ -56,7 +57,6 @@ Próximamente:
 
 - CSS3
 
-- JavaScript
 
 - React
 
@@ -72,8 +72,8 @@ Próximamente:
 
 
 
-🚧 En desarrollo.
-
+- Version:
+Clase 02
 
 
 ## Autor
