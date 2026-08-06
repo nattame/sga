@@ -109,79 +109,127 @@
 
 
 
-function obtenerClima(){
-    return new Promise((resolve)=>{
-        setTimeout(() => {
-            resolve("22*C - Soleado")
+// function obtenerClima(){
+//     return new Promise((resolve)=>{
+//         setTimeout(() => {
+//             resolve("22*C - Soleado")
             
-        },2000);
-    })
+//         },2000);
+//     })
+// }
+
+// //con then.
+// obtenerClima().then((clima)=>{
+//     console.log(clima)
+// })
+
+
+// //con async/await
+// async function mostrarClima(){
+//     const clima = await obtenerClima()
+//     console.log(clima)
+// }
+
+// mostrarClima()
+
+// function consultarSaldo(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             resolve(125000)
+//         },3000)
+//     }
+//     )
+// }
+
+
+// async function mostrarSaldo(){
+//     const saldo = await consultarSaldo()
+//     console.log(`Su saldo es: $${saldo}`)
+// }
+
+// mostrarSaldo()
+
+// function iniciarSesion(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             resolve("Bienvenido, Natan :P")
+//         },2000)
+//     })
+// }
+
+
+// async function mostrarUsuario(){
+//     const inicio = await iniciarSesion()
+//     console.log(inicio)
+// }
+
+// mostrarUsuario()
+
+// function obtenerUsuario(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             resolve({
+//                 id: 1,
+//                 nombre: "Maria",
+//                 edad:25
+//             })
+//         },3000)
+//     })
+// }
+
+
+// async function mostrarUsuario2(){
+//     console.log("Consultando usuario...")
+//     const usuario = await obtenerUsuario()
+//     console.log(usuario);
+// }
+
+// mostrarUsuario2();
+
+
+
+async function obtenerPosts() {
+    const respuestapost = await fetch("https://jsonplaceholder.typicode.com/posts")
+    const posts = await respuestapost.json()
+    // console.table(alumnos)
+    return posts
 }
 
-//con then.
-obtenerClima().then((clima)=>{
-    console.log(clima)
-})
 
 
-//con async/await
-async function mostrarClima(){
-    const clima = await obtenerClima()
-    console.log(clima)
-}
-
-mostrarClima()
-
-function consultarSaldo(){
-    return new Promise((resolve)=>{
-        setTimeout(()=>{
-            resolve(125000)
-        },3000)
-    }
-    )
+async function obtenerComments() {
+    const respuestacom = await fetch("https://jsonplaceholder.typicode.com/comments")
+    const comments = await respuestacom.json()
+    // console.table(alumnos)
+    return comments
 }
 
 
-async function mostrarSaldo(){
-    const saldo = await consultarSaldo()
-    console.log(`Su saldo es: $${saldo}`)
-}
+function mostrarPosts(posts){
+    // console.table(posts)
 
-mostrarSaldo()
+     for (const post of posts){
+      console.log(post.id, post.title, post.userId)
+     }
 
-function iniciarSesion(){
-    return new Promise((resolve)=>{
-        setTimeout(()=>{
-            resolve("Bienvenido, Natan :P")
-        },2000)
-    })
+
 }
 
 
-async function mostrarUsuario(){
-    const inicio = await iniciarSesion()
-    console.log(inicio)
+function mostrarComments(comments){
+    // console.table(comments)
+
+    for (const comment of comments){
+        console.log(comment.id, comment.name)
+     }
+
+
+}
+async function inciciar(){
+    const posts = await obtenerPosts()
+    mostrarPosts(posts)
+    const comments = await obtenerComments()
+    mostrarComments(comments)
 }
 
-mostrarUsuario()
-
-function obtenerUsuario(){
-    return new Promise((resolve)=>{
-        setTimeout(()=>{
-            resolve({
-                id: 1,
-                nombre: "Maria",
-                edad:25
-            })
-        },3000)
-    })
-}
-
-
-async function mostrarUsuario2(){
-    console.log("Consultando usuario...")
-    const usuario = await obtenerUsuario()
-    console.log(usuario);
-}
-
-mostrarUsuario2();
+inciciar()
