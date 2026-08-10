@@ -118,7 +118,17 @@ async function obtenerAlumno() {
 }
 
 function mostrarAlumno(alumnos){
-     console.table(alumnos)
+
+    console.log(typeof alumnos)
+    localStorage.setItem("alumnos", JSON.stringify(alumnos))
+    const datos = localStorage.getItem("alumnos")
+    console.log(typeof datos)
+    console.log(datos)
+    const alumnosRecuperados = JSON.parse(datos)
+    console.log(typeof alumnosRecuperados)
+    
+    console.table(alumnosRecuperados)
+    //  console.table(alumnos)
     // console.log(alumnos[0].email)
 
     // for (const alumno of alumnos){
@@ -129,7 +139,7 @@ function mostrarAlumno(alumnos){
 }
 async function inciciar(){
     const alumnos = await obtenerAlumno()
-    mostrarAlumnos(alumnos)
+    mostrarAlumno(alumnos)
 }
 
 inciciar()
