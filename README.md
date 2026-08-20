@@ -76,6 +76,13 @@ Próximamente:
 Clase 02
 
 
+Clase 10 - Estructura actual
+```text
+SGA/
+--index.html
+--
+```
+
 ## Autor
 
 
