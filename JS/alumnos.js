@@ -229,9 +229,10 @@ function obtenerAlumnos(){
 }
 
 
-function mostrarMensaje(texto, tipo){
+function mostrarMensaje(texto, clase){
     mensaje.textContent = texto;
-    mensaje.className = tipo;
+    mensaje.className = `mensaje ${clase}`;
+    mensaje.style.display= "block";
     setTimeout(()=>{
         mensaje.textContent = " ";
         mensaje.className = "oculto";

@@ -78,11 +78,21 @@ Clase 02
 
 Clase 10 - Estructura actual
 ```text
-SGA/
---index.html
---
-```
-
+SGA
+│  alumnos.html
+│  docentes.html
+│  index.html
+│  LICENSE
+│  README.md
+│  sistema de gestion academica
+│
+├─CSS
+│      style.css
+│
+└─JS
+        alumnos.js
+        asincronia.js
+        docentes.js
 ## Autor
 
 
