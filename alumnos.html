@@ -7,7 +7,10 @@
 
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="JS/storage.js" defer></script>
+    <script src="JS/ui.js" defer></script>
     <script src="JS/alumnos.js" defer></script>
+
     <title>SGA - Alumnos</title>
 </head>
 
@@ -23,8 +26,8 @@
         <h1>Gestion de Alumnos</h1>
         <section class="formulario-container">
             <h2>Alta de Alumno</h2>
-            <form id="formAlumno">
-                <div class="campo" >
+            <form id="formulario">
+                <div class="campo">
                     <label for="nombre">Nombre</label>
                     <input type="text" id="nombre">
 
@@ -41,7 +44,7 @@
 
                     <label for="correo">Correo Electronico</label>
                     <input type="text" id="correo">
-                </div >
+                </div>
                 <button type="submit">Guardar Alumno</button>
 
             </form>
@@ -51,7 +54,7 @@
         </section>
         <section class="lista-container">
             <h2>Alumnos registrados</h2>
-            <p id="cantidadAlumnos"></p>
+            <!-- <p id="cantidadAlumnos"></p> -->
             <table>
                 <thead>
                     <tr>
@@ -67,8 +70,9 @@
 
                 </tbody>
             </table>
-            <div id="mensaje" class="mensaje"></div>
+           
         </section>
+         <div id="mensaje" class="mensaje"></div>
     </main>
 
 </body>

@@ -139,7 +139,7 @@ th{
     background-color:#f0f0f0;
 }
 
-#mensaje{
+/* #mensaje{
     
     position: fixed ;
     top: 20px;
@@ -153,7 +153,7 @@ th{
 
     font-weight: bold;
     margin-top: 15px;
-}
+} */
 .mje-exito{
 
     background-color: #16a34a;
@@ -176,7 +176,7 @@ th{
 }
 .mje-error{
     
-    background-color: #fee2e2;
+    background-color: #ec8f8f;
    
 
 

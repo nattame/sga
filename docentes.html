@@ -1,29 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/storage.js"></script>
+    <script src="JS/ui.js"></script>
+    <script src="JS/docentes.js" defer></script>
     <title>SGA - Docentes</title>
 </head>
-<body>
-      <header>
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="alumnos.html">Alumnos</a>
-        <a href="docentes.html">Docentes</a>
-    </nav>
-    </main>
-    <main>
-     <form id="formIngreso">
-    <label for="nombre">Nombre</label>
-    <input type="text" id="nombre"><br><br>
-    <label for="correo">Correo Electronico</label>
-    <input type="text" id="correo">
-    <button type="submit">Ingresar</button>
-   
-   </form>
 
-    </main>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="alumnos.html">Alumnos</a>
+            <a href="docentes.html">Docentes</a>
+        </nav>
+    </header> 
+        <main>
+            <form id="formDocentes">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre"><br><br>
+                <label for="correo">Correo Electronico</label>
+                <input type="text" id="correo">
+                <button type="submit">Agregar Docente</button>
+
+
+
+
+            </form>
+
+
+            <h2>Docentes Registrados</h2>
+
+              <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Acciones</th>
+
+                    </tr>
+                </thead>
+                <tbody id="listaDocentes">
+
+                </tbody>
+            </table>
+
+            <div id="mensaje" class="mensaje"></div>
+
+        </main>
 </body>
+
 </html>
