@@ -30,7 +30,7 @@ nav a{
     transition: background-color 0.2s;
 }
 
-nav a:active{
+nav a.activo{
     background-color: #4b5563;
 }
 
@@ -181,6 +181,10 @@ th{
 
 
 }
+
+.mje-adv{
+    background-color: #b45309;
+}
 .oculto{
     display:none;
 }
@@ -274,4 +278,17 @@ th{
 .tarjeta-deshabilitada{
     transform: none;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12)
+}
+
+.acciones-form{
+    display: flex;
+    gap: 10px;
+}
+
+.btn-cancelar{
+    background-color: #6b7280;
+}
+
+.btn-cancelar:hover{
+    background-color: #4b5563;
 }

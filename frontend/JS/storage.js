@@ -6,7 +6,7 @@ function guardarDatos(clave, datos){
 function obtenerDatos(clave){
     const datos = localStorage.getItem(clave)
     if(datos){
-        return JSON.parse(clave)
+        return JSON.parse(datos)
     }
     return [] //Evita que se devuelva null
 }

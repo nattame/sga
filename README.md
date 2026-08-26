@@ -76,23 +76,42 @@ Próximamente:
 Clase 02
 
 
-Clase 10 - Estructura actual
+Clase 12 - Estructura actual
 ```text
-SGA
-│  alumnos.html
-│  docentes.html
-│  index.html
-│  LICENSE
-│  README.md
-│  sistema de gestion academica
-│
-├─CSS
-│      style.css
-│
-└─JS
-        alumnos.js
-        asincronia.js
-        docentes.js
+
+SGA/
+frontend
+        │  alumnos.html
+        │  docentes.html
+        │  index.html
+        │  LICENSE
+        │  README.md
+        │  sistema de gestion academica
+        │
+        ├─CSS
+        │      style.css
+        │
+        └─JS
+                alumnos.js
+                asincronia.js
+                docentes.js
+backend
+
+```
+## Estado actual
+
+- Pagina de inicio y navegacion entre modulos
+- Modulo alumnos docentes
+- CRUD alumnos/docentes
+- Validaciones de formularios
+- Persistencia mediante localStorage
+- Organizacion del codigo y refactorizacion
+- Separacion inicial entre Frontend y Backend
+
+## Almacenammiento
+
+- localStorage
+- JSON.stringify
 ## Autor
 
 
