@@ -16,3 +16,40 @@ GET http://localhost:3000/docentes
 
 
 GET http://localhost:3000/docentes/5
+
+
+###
+
+POST http://localhost:3000/alumnos
+Content-Type: application/json
+
+{
+    "id" : 7,
+    "nombre" : "Isaac",
+    "carrera" : "The Binding of"
+}
+
+
+###
+
+PUT http://localhost:3000/alumnos/1
+Content-Type: application/json
+
+{
+    "id" : 2,
+    "nombre" : "JuanPerez",
+    "carrera" : "Prooo"
+}
+###
+
+GET  http://localhost:3000/alumnos/2
+
+
+###
+
+DELETE http://localhost:3000/alumnos/"7"
+
+
+###
+
+GET http://localhost:3000/alumnos

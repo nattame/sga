@@ -1,9 +1,11 @@
 const express = require("express");
 
 const app = express()
+app.use(express.json())
+const alumnosRoutes = require("./routes/alumnos.routes")
+app.use("/alumnos", alumnosRoutes)
 
-
-const alumnos = [
+let alumnos = [
     {
         id: 1,
         nombre: "Axel",
@@ -31,6 +33,9 @@ const alumnos = [
         carrera: "???"
     }
 ]
+
+
+
 
 const docentes = [
     {
@@ -62,7 +67,12 @@ const docentes = [
 ]
 
 
-
+//Crep un  middleware
+app.use((req,res,next)=>{
+    console.log(req.method)
+    console.log(req.url)
+    next()
+})
 
 
 app.get("/alumnos", (req,res)=>{
@@ -82,12 +92,6 @@ app.get("/docentes/:id",(req,res)=>{
 
 
 
-app.get("/alumnos/:id", (req,res)=>{
-    const id = Number(req.params.id)
-    const alumno = alumnos.find(a => a.id === id)
-    res.json(alumno)
-})
-
 
 app.listen(3000, ()=>{
     console.log("Servidor funcionando en http://localhost:3000")
@@ -104,3 +108,7 @@ app.listen(3000, ()=>{
 //Probar ambas rutas con navegador y postman.
 
 // Consultar un ID inexistente y oservar que ocurre.
+
+
+
+
