@@ -1,3 +1,8 @@
+const alumnos = require("../DATA/alumnos")
+
+
+
+
 function obtenerAlumnos(req, res){
 
     res.json(alumnos)
@@ -5,4 +10,4 @@ function obtenerAlumnos(req, res){
 }
 
 
-module.exports = {obtenerAlumnos }
+module.exports = {obtenerAlumnos}

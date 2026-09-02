@@ -1,8 +1,11 @@
 const express = require("express")
+//const alumnosController = require("../controllers/alumnos.controller")
+const {obtenerAlumnos} = require("../controllers/alumnos.controller")
 const router = express.Router()
 
 
 router.get("/", obtenerAlumnos)
+
 router.get("/:id", (req,res)=>{
     const id = Number(req.params.id)
     const alumno = alumnos.find(a => a.id === id)
