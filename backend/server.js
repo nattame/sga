@@ -1,65 +1,68 @@
 const express = require("express");
 
 const app = express()
+
 app.use(express.json())
+
 const alumnosRoutes = require("./routes/alumnos.routes")
+
 app.use("/alumnos", alumnosRoutes)
 
 
 
 
 
-const docentes = [
-    {
-        id: 1,
-        nombre: "Sergio",
-        carrera: "Sistemas"
-    },
-    {
-        id: 2,
-        nombre: "Manuel",
-        carrera: "Peluqueria"
+// const docentes = [
+//     {
+//         id: 1,
+//         nombre: "Sergio",
+//         carrera: "Sistemas"
+//     },
+//     {
+//         id: 2,
+//         nombre: "Manuel",
+//         carrera: "Peluqueria"
 
-    },
-    {
-        id: 3,
-        nombre: "Diego",
-        carrera: "Ingenieria"
-    },
-    {
-        id: 4,
-        nombre: "Zahira",
-        carrera: "???"
-    },
-    {
-        id: 5,
-        nombre: "Nena",
-        carrera: "Perrita profesional"
-    }
-]
+//     },
+//     {
+//         id: 3,
+//         nombre: "Diego",
+//         carrera: "Ingenieria"
+//     },
+//     {
+//         id: 4,
+//         nombre: "Zahira",
+//         carrera: "???"
+//     },
+//     {
+//         id: 5,
+//         nombre: "Nena",
+//         carrera: "Perrita profesional"
+//     }
+// ]
 
 
 //Crep un  middleware
-app.use((req,res,next)=>{
-    console.log(req.method)
-    console.log(req.url)
-    next()
-})
+// app.use((req,res,next)=>{
+//     console.log(req.method)
+//     console.log(req.url)
+//     next()
+// })
 
 
-app.get("/alumnos", (req,res)=>{
-    res.json(alumnos)
-})
+// app.get("/alumnos", (req,res)=>{
+//     res.json(alumnos)
+// })
 
-app.get("/docentes",(req,res)=>{
-    res.json(docentes)
-})
+// app.get("/docentes",(req,res)=>{
+//     res.json(docentes)
+// })
 
-app.get("/docentes/:id",(req,res)=>{
-    const id = Number(req.params.id)
-    const docente = docentes.find(a => a.id === id)
-    res.json(docente)
-})
+// app.get("/docentes/:id",(req,res)=>{
+//     const id = Number(req.params.id)
+//     const docente = docentes.find(a => a.id === id)
+//     res.json(docente)
+// })
 
 
 

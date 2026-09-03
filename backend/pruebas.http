@@ -3,7 +3,7 @@ GET http://localhost:3000/alumnos
 
 ###
 
-GET http://localhost:3000/alumnos/10
+GET http://localhost:3000/alumnos/20
 
 
 ###
@@ -24,9 +24,9 @@ POST http://localhost:3000/alumnos
 Content-Type: application/json
 
 {
-    "id" : 7,
-    "nombre" : "Isaac",
-    "carrera" : "The Binding of"
+    "id" : 8,
+    "nombre" : "Sonic",
+    "carrera" : "Adventure"
 }
 
 
@@ -47,9 +47,19 @@ GET  http://localhost:3000/alumnos/2
 
 ###
 
-DELETE http://localhost:3000/alumnos/"7"
+DELETE http://localhost:3000/alumnos/5
 
 
 ###
 
 GET http://localhost:3000/alumnos
+
+
+
+###
+    
+POST http://localhost:3000/alumnos
+Content-Type: application/json
+
+{
+}
