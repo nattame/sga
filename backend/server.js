@@ -5,7 +5,8 @@ const app = express()
 app.use(express.json())
 
 const alumnosRoutes = require("./routes/alumnos.routes")
-
+const conectarBD = require("./config/database")
+conectarBD()
 app.use("/alumnos", alumnosRoutes)
 
 

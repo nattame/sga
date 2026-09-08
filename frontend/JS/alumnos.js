@@ -369,4 +369,4 @@ function cancelarEdicion(){
 btnCancelar.addEventListener("click", cancelarEdicion)
 
 const alumnos = obtenerAlumnos()
-mostrarAlumnos(alumnos)
+mostrarAlumnos(alumnos) 

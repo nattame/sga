@@ -10,14 +10,14 @@ router.get("/:id", obtenerAlumno)
 
 
 
+
 router.post("/", crearAlumno)
 
 router.put("/:id", actualizarAlumno)
 
 
 
-router.delete("/:id", eliminarAlumno
-)
+router.delete("/:id", eliminarAlumno)
 
 
 module.exports = router;
