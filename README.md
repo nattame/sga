@@ -56,13 +56,13 @@ Actualmente:
 
 - Node.js
 
+- MongoDB
 
 Próximamente:
 
 - React
 
 
-- MongoDB
 
 
 
@@ -110,6 +110,12 @@ backend
 - status 404 para alumno no encontrado
 - status 201 para registrar nuevo alumno
 - Manejo basico de errores en las opeaciones del CRUD..
+- Instalacion de moongoose
+- Creacion de la conexion con MongoDB en config/database.js
+- Creacion del Schema y modelo Alumno
+- Reemplazo del array en memoria poruna coleccion de MongoDB
+- Modificacion de GET /alumnos para consultar MongoDB mediante mongoose
+- Prueba de la API con datos almacienados en MongoDB
 
 ## Almacenammiento
 
