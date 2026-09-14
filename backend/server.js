@@ -6,8 +6,15 @@ app.use(express.json())
 
 const alumnosRoutes = require("./routes/alumnos.routes")
 const conectarBD = require("./config/database")
-conectarBD()
+
 app.use("/alumnos", alumnosRoutes)
+
+
+
+require("dotenv").config()
+const PORT = process.env.PORT
+
+conectarBD()
 
 
 
@@ -69,8 +76,8 @@ app.use("/alumnos", alumnosRoutes)
 
 
 
-app.listen(3000, ()=>{
-    console.log("Servidor funcionando en http://localhost:3000")
+app.listen(PORT, ()=>{
+    console.log(`Servidor funcionando en http://localhost:${PORT}`)
 })
 
 

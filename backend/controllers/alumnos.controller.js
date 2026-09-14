@@ -38,6 +38,23 @@ async function crearAlumno(req,res){
             mensaje: "El nombre debe ser un texto"
          })
     }
+
+    if(typeof legajo !== "number"){
+        return res.status(400).json({
+            mensaje: "El legajo debe ser un numero"
+        })
+    }
+
+
+    const existe = await Alumno.findOne({
+        legajo
+    })
+
+    if(existe){
+        return res.status(400).json({
+            mensaje: "El legajo ya existe"
+        })
+    }
     const nuevoAlumno = await Alumno.create({
         legajo,
         nombre,
@@ -48,10 +65,15 @@ async function crearAlumno(req,res){
 
 
     async function actualizarAlumno(req,res){
+
+        const {nombre, carrera, correo} = req.body
     
-    const alumno = await Alumno.findOneAndUpdate({
-        legajo: Number(req.params.id)
-    },
+    const alumno = await Alumno.findOneAndUpdate(
+        {nombre: req.params.nombre},
+        {carrera: req.params.carrera},
+        {correo: req.params.correo},
+        {legajo: Number(req.params.id)}
+    ,
         req.body,
         {
             returnDocument: "after"
