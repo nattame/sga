@@ -2,8 +2,10 @@ const express = require("express");
 
 const app = express()
 
-app.use(express.json())
+const cors = require("cors")
 
+app.use(express.json())
+app.use(cors())
 const alumnosRoutes = require("./routes/alumnos.routes")
 const conectarBD = require("./config/database")
 
@@ -13,6 +15,7 @@ app.use("/alumnos", alumnosRoutes)
 
 require("dotenv").config()
 const PORT = process.env.PORT
+
 
 conectarBD()
 

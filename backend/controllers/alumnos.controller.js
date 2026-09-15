@@ -69,12 +69,9 @@ async function crearAlumno(req,res){
         const {nombre, carrera, correo} = req.body
     
     const alumno = await Alumno.findOneAndUpdate(
-        {nombre: req.params.nombre},
-        {carrera: req.params.carrera},
-        {correo: req.params.correo},
-        {legajo: Number(req.params.id)}
-    ,
-        req.body,
+        
+        {legajo: Number(req.params.id)},
+        {nombre, carrera, correo},
         {
             returnDocument: "after"
         }
