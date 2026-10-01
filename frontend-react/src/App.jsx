@@ -1,11 +1,15 @@
-import Titulo from "./components/Titulo"
-import {Navbar} from "./components/Navbar"
-import Footer from "./components/Footer"
-import TarjetaAlumno from "./components/TarjetaAlumno.jsx"
-
+// import Titulo from "./components/Titulo"
+// import {Navbar} from "./components/Navbar"
+// import Footer from "./components/Footer"
+// import TarjetaAlumno from "./components/TarjetaAlumno.jsx"
+import CambiarTitulo from "./components/ejemplos/CambiarTitulo.jsx";
+import Incrementar from "./components/Incrementar.jsx";
+import { Adivina } from "./components/ejemplos/Adivina.jsx";
 function App(){
 
  return(
+    /*
+    
     <>
     <Navbar />
   <Titulo texto="Sistema de Gestion Academica" color="blue" />
@@ -25,8 +29,21 @@ function App(){
   <br/>
   
 
-  <Footer />
+  <Footer /> 
     </>
+    
+    */
+
+
+<>
+<Incrementar />
+<br/>
+<CambiarTitulo/>
+
+<br /><br />
+
+<Adivina />
+</>
  )
 }
 
