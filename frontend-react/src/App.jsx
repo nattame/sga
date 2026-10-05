@@ -5,6 +5,8 @@
 import CambiarTitulo from "./components/ejemplos/CambiarTitulo.jsx";
 import Incrementar from "./components/Incrementar.jsx";
 import { Adivina } from "./components/ejemplos/Adivina.jsx";
+import Mensaje from "./components/ejemplos/Mensaje.jsx";
+import TamanioTexto from "./components/ejemplos/TamanioTexto.jsx";
 function App(){
 
  return(
@@ -43,6 +45,14 @@ function App(){
 <br /><br />
 
 <Adivina />
+
+<br /><br /><br />
+
+<Mensaje />
+
+<br /><br /><br />
+
+<TamanioTexto/>
 </>
  )
 }
