@@ -1,15 +1,18 @@
+import { useState } from "react";
 // import Titulo from "./components/Titulo"
 // import {Navbar} from "./components/Navbar"
 // import Footer from "./components/Footer"
 // import TarjetaAlumno from "./components/TarjetaAlumno.jsx"
-import CambiarTitulo from "./components/ejemplos/CambiarTitulo.jsx";
-import Incrementar from "./components/Incrementar.jsx";
-import { Adivina } from "./components/ejemplos/Adivina.jsx";
-import Mensaje from "./components/ejemplos/Mensaje.jsx";
-import TamanioTexto from "./components/ejemplos/TamanioTexto.jsx";
+// import CambiarTitulo from "./components/ejemplos/CambiarTitulo.jsx";
+// import Incrementar from "./components/Incrementar.jsx";
+// import { Adivina } from "./components/ejemplos/Adivina.jsx";
+// import Mensaje from "./components/ejemplos/Mensaje.jsx";
+// import TamanioTexto from "./components/ejemplos/TamanioTexto.jsx";
+
+import FormularioA from "./components/FormularioA";
 function App(){
 
- return(
+
     /*
     
     <>
@@ -37,8 +40,8 @@ function App(){
     */
 
 
-<>
-<Incrementar />
+
+/* <Incrementar />
 <br/>
 <CambiarTitulo/>
 
@@ -52,9 +55,42 @@ function App(){
 
 <br /><br /><br />
 
-<TamanioTexto/>
+<TamanioTexto/> */
+
+const [nombre, setNombre] = useState("")
+
+function guardar(e){
+  e.preventDefault()
+  console.log("Formulario enviado")
+
+
+}
+
+
+// function mostrarEvento(e){
+//   console.log(e.target)
+// }
+
+ return(
+<>
+<FormularioA/>
+
+{/* <button onClick={mostrarEvento}>Clic</button>
+<input value={nombre}
+onChange={(e)=> setNombre(e.target.value)} />
+<p>Hola {nombre}</p> */}
+
+
+{/* <form onSubmit={guardar}>
+  <input />
+  <button type="submit">Guardar</button>
+</form> */}
 </>
  )
+
 }
+
+
+
 
 export default App;
