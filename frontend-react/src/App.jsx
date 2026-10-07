@@ -1,92 +1,42 @@
-import { useState } from "react";
-// import Titulo from "./components/Titulo"
-// import {Navbar} from "./components/Navbar"
-// import Footer from "./components/Footer"
-// import TarjetaAlumno from "./components/TarjetaAlumno.jsx"
-// import CambiarTitulo from "./components/ejemplos/CambiarTitulo.jsx";
-// import Incrementar from "./components/Incrementar.jsx";
-// import { Adivina } from "./components/ejemplos/Adivina.jsx";
-// import Mensaje from "./components/ejemplos/Mensaje.jsx";
-// import TamanioTexto from "./components/ejemplos/TamanioTexto.jsx";
+import {useEffect, useState } from "react";
+//import Pantalla from "./components/ejemplos/Pantalla";
 
-import FormularioA from "./components/FormularioA";
 function App(){
 
 
-    /*
-    
-    <>
-    <Navbar />
-  <Titulo texto="Sistema de Gestion Academica" color="blue" />
-  <h2>Administracion de Alumnos</h2>
-  <TarjetaAlumno 
-  nombre="Natan Velazquez"
-  carrera = "Programacion"
-  edad = "20"/>
+// const [alumno, setAlumno] = useState({
+//   nombre:"Ana",
+//   curso: "Programacion IV"
+// })
+
+// useEffect(()=>{
+//   document.title = `Alumno: ${alumno.nombre}`
+// }, [alumno])
+
+  const[nombre, setNombre] = useState("")
+
+  useEffect(()=>{
+    if (nombre){
+    document.title = `Hola ${nombre}`
+ }else{
+  document.title = `Mi aplicacion`
+ }
+ }, [nombre])
   
-  <br/>
-  
-   <TarjetaAlumno 
-  nombre="Axel Llaves"
-  carrera = "Mozo"
-  edad = "24"/>
-  
-  <br/>
-  
-
-  <Footer /> 
-    </>
-    
-    */
 
 
 
-/* <Incrementar />
-<br/>
-<CambiarTitulo/>
+return(
+  <>
+  <input value={nombre}
+  onChange={(e)=> setNombre(e.target.value)}
+  placeholder="Escribi tu nombre"/>
 
-<br /><br />
-
-<Adivina />
-
-<br /><br /><br />
-
-<Mensaje />
-
-<br /><br /><br />
-
-<TamanioTexto/> */
-
-const [nombre, setNombre] = useState("")
-
-function guardar(e){
-  e.preventDefault()
-  console.log("Formulario enviado")
+  <h2>Hola {nombre}</h2>
+  </>
 
 
-}
-
-
-// function mostrarEvento(e){
-//   console.log(e.target)
-// }
-
- return(
-<>
-<FormularioA/>
-
-{/* <button onClick={mostrarEvento}>Clic</button>
-<input value={nombre}
-onChange={(e)=> setNombre(e.target.value)} />
-<p>Hola {nombre}</p> */}
-
-
-{/* <form onSubmit={guardar}>
-  <input />
-  <button type="submit">Guardar</button>
-</form> */}
-</>
- )
+)
 
 }
 
