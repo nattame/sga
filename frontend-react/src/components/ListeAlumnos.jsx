@@ -22,7 +22,7 @@ export function ListaAlumnos(){
             setAlumnos(datos)
 
         }catch(error){
-            console.error("Error de conexion")
+            console.error("Error de conexion", error)
         }
         }
 

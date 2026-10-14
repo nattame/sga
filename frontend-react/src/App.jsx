@@ -1,10 +1,14 @@
+import FormularioA from "./components/FormularioA";
 import { ListaAlumnos } from "./components/ListeAlumnos";
+
 function App(){
 
 
 return(
   <>
-  <ListaAlumnos/>
+
+  <FormularioA/>
+  {/* <ListaAlumnos/> */}
 
   </>
 )
