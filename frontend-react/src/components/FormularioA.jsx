@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const API_ALUMNOS = "http://localhost:3000/alumnos"
-function FormularioA(){
+function FormularioA({ onAlumnoCreado }){
 
     const [formulario, setFormulario] = useState({
 
@@ -22,10 +22,10 @@ function FormularioA(){
         })
     }
 
-    const[legajo, setLegajo] = useState("")
-    const[nombre, setNombre] = useState("")
-    const[correo, setCorreo] = useState("")
-    const[carrera, setCarrera] = useState("")
+    // const[legajo, setLegajo] = useState("")
+    // const[nombre, setNombre] = useState("")
+    // const[correo, setCorreo] = useState("")
+    // const[carrera, setCarrera] = useState("")
   
     async function guardar(e){
         e.preventDefault()
@@ -51,6 +51,7 @@ function FormularioA(){
                 carrera:"",
                 correo:""
             })
+            onAlumnoCreado()
         }catch(error){
             console.error("Error al guardar:", error)
             setError(error.message||"No se puede conectar con el servidor")
@@ -80,6 +81,7 @@ function FormularioA(){
             name="nombre"
             value={formulario.nombre}
             onChange={manejarCambio}
+            required
             />
              <label htmlFor="correo">Correo</label>
             <input 
@@ -106,12 +108,6 @@ function FormularioA(){
             
              
         </form>
-    
-
-       <h3>Legajo: {legajo}</h3>
-       <h3>Nombre: {nombre}</h3>
-       <h3>Correo: {correo}</h3>
-       <h3>Carrera {carrera}</h3>
        </>
     )
 

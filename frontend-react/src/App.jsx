@@ -1,16 +1,30 @@
+import { useState } from "react";
 import FormularioA from "./components/FormularioA";
-import { ListaAlumnos } from "./components/ListeAlumnos";
+import { ListaAlumnos } from "./components/ListaAlumnos";
 
 function App(){
 
+const [actualizar, setActualizar] = useState(0)
+const [alumnoEditar, setAlumnoEditar] = useState(null)
+function alumnoCreado(){
+  setActualizar(valor => valor + 1)
+}
 
+function seleccionarAlumno(alumno){
+  setAlumnoEditar(alumno)
+}
 return(
-  <>
 
-  <FormularioA/>
-  {/* <ListaAlumnos/> */}
+  <main>
 
-  </>
+  <FormularioA key={alumnoEditar?.legajo ?? "nuevo"}
+  onAlumnoCreado={alumnoCreado}
+  alumnoEditar={alumnoEditar}/>
+  <ListaAlumnos actualizar={actualizar} 
+  onAlumnoCreado={alumnoCreado}
+  onEditarAlumno={seleccionarAlumno}/>
+
+  </main>
 )
 }
 
