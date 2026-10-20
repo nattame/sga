@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 
 const API_ALUMNOS = "http://localhost:3000/alumnos"
 
-export function ListaAlumnos({actualizar, onAlumnoCreado}){
+export function ListaAlumnos({actualizar, onAlumnoCreado, onEditarAlumno}){
 
     const [alumnos, setAlumnos] = useState([])
     const [cargando, setCargando] = useState(true)
@@ -78,6 +78,10 @@ export function ListaAlumnos({actualizar, onAlumnoCreado}){
             <li key ={alumno.legajo}>
                 {alumno.legajo} - {alumno.nombre} - {alumno.carrera}
                 <br />
+                <button type="button"
+                onClick={()=>onEditarAlumno(alumno)}
+                >Editar</button>
+                
         <   button type="button"
             onClick={()=> eliminarAlumno(alumno.legajo)}>Eliminar</button>       
             </li>)
