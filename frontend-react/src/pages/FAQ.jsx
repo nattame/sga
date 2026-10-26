@@ -7,7 +7,7 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 //import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Paper from '@mui/material/Paper';
 
-export function FAQ() {
+export default function FAQ() {
   const id = React.useId();
   return (
     <div>
