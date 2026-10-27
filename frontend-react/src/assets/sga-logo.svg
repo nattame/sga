@@ -1,0 +1,13 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sgaGrad" x1="12" y1="12" x2="108" y2="108" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6EA7D8"/>
+      <stop offset="0.52" stop-color="#526D82"/>
+      <stop offset="1" stop-color="#D18B65"/>
+    </linearGradient>
+  </defs>
+  <rect x="6" y="6" width="108" height="108" rx="24" fill="url(#sgaGrad)"/>
+  <path d="M36 80V40H50.5C60.3 40 67 46.5 67 55.5C67 64.5 60.3 71 50.5 71H42V80H36ZM42 66H49.5C56.1 66 60 61.8 60 55.5C60 49.2 56.1 45 49.5 45H42V66Z" fill="white" fill-opacity="0.96"/>
+  <path d="M69 80V40H94V46H76V56H91V62H76V80H69Z" fill="white" fill-opacity="0.82"/>
+  <circle cx="89" cy="32" r="8" fill="#F7E7D8" fill-opacity="0.9"/>
+</svg>

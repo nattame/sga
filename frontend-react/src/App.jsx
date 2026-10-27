@@ -5,6 +5,7 @@ import FAQ from "./pages/FAQ"
 import {Routes,Route} from "react-router-dom"
 import LayoutPrincipal from "./layouts/LayoutPrincipal"
 import Inicio from "./pages/Inicio"
+import Docentes from "./pages/Docentes"
 
 function App()
 {
@@ -12,8 +13,10 @@ function App()
         <Routes>
             <Route path="/" element={<LayoutPrincipal/>}>
             <Route index element={<Inicio/>}/>
-            <Route index element={<Alumnos/>}/>
-            <Route index element={<FAQ/>}/>
+            <Route path="alumnos" element={<Alumnos/>}/>
+            <Route path="docentes" element={<Docentes/>}/>
+            <Route path="ayuda" element={<FAQ/>}/>
+            
             </Route>
         </Routes>
     )
