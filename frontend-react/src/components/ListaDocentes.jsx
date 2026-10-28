@@ -115,10 +115,10 @@ export function ListaDocentes({ actualizar, onDocenteCreado, onEditarDocente }) 
                   {docente.nombre}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Legajo: {docente.dni}
+                  DNI: {docente.dni}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Carrera: {docente.especialidad}
+                  Especialidad: {docente.especialidad}
                 </Typography>
               </Box>
 

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Box, Button, Paper, Stack, Typography, useTheme } from '@mui/material';
 
-const API_ALUMNOS = 'http://localhost:3000/alumnos';
+const API_ALUMNOS = "http://localhost:3000/alumnos";
 
 function FormularioA({ onAlumnoCreado, alumnoEditar, onCancelar }) {
   const theme = useTheme();
@@ -40,7 +40,7 @@ function FormularioA({ onAlumnoCreado, alumnoEditar, onCancelar }) {
     try {
       const respuesta = await fetch(url, {
         method: editando ? 'PUT' : 'POST',
-        header: { 'Content-Type': 'application' },
+        header: { "Content-Type":"application" },
         body: JSON.stringify(alumno)
       });
 
@@ -54,7 +54,7 @@ function FormularioA({ onAlumnoCreado, alumnoEditar, onCancelar }) {
         carrera: '',
         correo: ''
       });
-      onAlumnoCreado();
+      onAlumnoCreado()
     } catch (error) {
       console.error('Error al guardar:', error);
       setError(error.message || 'No se puede conectar con el servidor');

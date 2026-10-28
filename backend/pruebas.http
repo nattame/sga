@@ -65,3 +65,27 @@ Content-Type: application/json
 
 {
 }
+
+###
+
+GET http://localhost:3000/materias
+
+
+###
+
+GET http://localhost:3000/docentes
+
+
+
+
+###
+
+POST http://localhost:3000/docentes
+Content-Type: application/json
+
+{
+    "dni": 5343434,
+    "nombre": "Mairan",
+    "especialidad": "macis",
+    "correo": "blah@sds.com"
+}

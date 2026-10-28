@@ -9,7 +9,7 @@ function FormularioD({ onDocenteCreado, docenteEditar, onCancelar }) {
   const [formulario, setFormulario] = useState({
     dni: String(docenteEditar?.dni ?? ''),
     nombre: docenteEditar?.nombre ?? '',
-    escpecialidad: docenteEditar?.especialidad ?? '',
+    especialidad: docenteEditar?.especialidad ?? '',
     correo: docenteEditar?.correo ?? ''
   });
 
@@ -35,7 +35,7 @@ function FormularioD({ onDocenteCreado, docenteEditar, onCancelar }) {
     };
 
     const editando = Boolean(docenteEditar);
-    const url = editando ? `${API_DOCENTES}/${docenteEditar.legajo}` : API_DOCENTES;
+    const url = editando ? `${API_DOCENTES}/${docenteEditar.dni}` : API_DOCENTES;
 
     try {
       const respuesta = await fetch(url, {
