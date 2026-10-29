@@ -7,13 +7,13 @@ function FormularioA({ onAlumnoCreado, alumnoEditar, onCancelar }) {
   const theme = useTheme();
 
   const [formulario, setFormulario] = useState({
-    legajo: String(alumnoEditar?.legajo ?? ''),
-    nombre: alumnoEditar?.nombre ?? '',
-    carrera: alumnoEditar?.carrera ?? '',
-    correo: alumnoEditar?.correo ?? ''
+    legajo: String(alumnoEditar?.legajo ?? ""),
+    nombre: alumnoEditar?.nombre ?? "",
+    carrera: alumnoEditar?.carrera ?? "",
+    correo: alumnoEditar?.correo ?? ""
   });
 
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [guardando, setGuardando] = useState(false);
 
   function manejarCambio(e) {
@@ -35,12 +35,14 @@ function FormularioA({ onAlumnoCreado, alumnoEditar, onCancelar }) {
     };
 
     const editando = Boolean(alumnoEditar);
-    const url = editando ? `${API_ALUMNOS}/${alumnoEditar.legajo}` : API_ALUMNOS;
+    const url = editando 
+                ? `${API_ALUMNOS}/${alumnoEditar.legajo}` 
+                : API_ALUMNOS;
 
     try {
       const respuesta = await fetch(url, {
         method: editando ? 'PUT' : 'POST',
-        header: { "Content-Type":"application" },
+        headers: { "Content-Type":"application/json" },
         body: JSON.stringify(alumno)
       });
 
