@@ -13,11 +13,13 @@ app.use(cors())
 const alumnosRoutes = require("./routes/alumnos.routes")
 const docentesRoutes = require("./routes/docentes.routes")
 const materiaRoutes = require("./routes/materiaRoutes")
+const authRoutes = require("./routes/authRoutes")
 const conectarBD = require("./config/database")
 
 app.use("/alumnos", alumnosRoutes)
 app.use("/docentes", docentesRoutes)
 app.use("/materias", materiaRoutes)
+app.use("/auth", authRoutes)
 
 
 

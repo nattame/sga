@@ -1,5 +1,5 @@
-const Usuario = require("../moels/Usuario")
-const bcrpt = require("bcrypt")
+const Usuario = require("../models/Usuario")
+const bcrypt = require("bcrypt")
 
 const login = async(req, res) =>{
     try{
@@ -20,7 +20,7 @@ const login = async(req, res) =>{
             })
         }
 
-        const coincide= await bycrypt.compare(
+        const coincide= await bcrypt.compare(
             password, usuario.password
         )
         if(!coincide){

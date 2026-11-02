@@ -89,3 +89,16 @@ Content-Type: application/json
     "especialidad": "macis",
     "correo": "blah@sds.com"
 }
+
+
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email" : "admin@sga.com",
+    "password" : "ClavedePrueba123!"
+}
+
