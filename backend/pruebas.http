@@ -102,3 +102,13 @@ Content-Type: application/json
     "password" : "ClavedePrueba123!"
 }
 
+###
+POST http://localhost:3000/materias
+Content-Type: application/json
+
+{
+    "codigo" : "B",
+    "nombre" : "Base Ba A",
+    "descripcion" : "a",
+    "cargaHoraria" : "as"
+}
