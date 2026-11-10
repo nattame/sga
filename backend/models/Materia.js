@@ -10,7 +10,7 @@ const materiaSchema = new mongoose.Schema({
         
     nombre: String,
     descripcion: String,
-    cargaHoraria: String,
+    cargaHoraria: Number,
     Estado: String
 },
 

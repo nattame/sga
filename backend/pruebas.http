@@ -107,8 +107,33 @@ POST http://localhost:3000/materias
 Content-Type: application/json
 
 {
-    "codigo" : "B",
+    "codigo" : "aavaad",
     "nombre" : "Base Ba A",
     "descripcion" : "a",
-    "cargaHoraria" : "as"
+    "cargaHoraria" : 3,
+    "Estado" : "Inactivo"
+
 }
+
+###
+
+GET http://localhost:3000/materias
+
+
+###
+
+PUT http://localhost:3000/materias/ABCD
+Content-Type: application/json
+
+{
+    "codigo" : "abcd",
+    "nombre" : "JuanPumbasa",
+    "descripcion" : "CS",
+    "cargaHoraria" : 2,
+    "Estado" : "Activa"
+}
+
+
+
+###
+DELETE http://localhost:3000/materias/abcd
